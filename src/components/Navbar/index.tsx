@@ -1,14 +1,16 @@
 function Navbar() {
   return (
-    <nav className="bg-[#935454] py-1 px-6 h-[60px] flex items-center">
+    <nav className="bg-[#571212] py-1  h-[68px] flex items-center">
       {/* Ovde kreiram nas Loga za moj web site */}
       <div className="flex justify-between items-center w-[80%] mx-auto">
         {/*Zajednicki border padding za gore */}
         <div className="flex space-x-16">
-          <div className="flex flex-col text-yellow-500 leading-tight">
+          <div className="flex flex-col text-yellow-500 leading-tight gap-0">
             {/*boja LOGO texta zuta */}
-            <h4 className="text-xl leading-3 font-lg">ALLABOUT</h4>
-            <h1 className="text-[20px] leading-4 font-semibold">MOVIES</h1>
+            <h4 className="text-xl leading-none m-0 font-md">ALLABOUT</h4>
+            <h1 className="text-[20px] leading-none m-0 font-semibold">
+              MOVIES
+            </h1>
           </div>
 
           {/*Dugme */}

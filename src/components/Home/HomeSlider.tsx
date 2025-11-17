@@ -6,14 +6,41 @@ import HomecarouselList from "./HomecarouselList";
 
 function HomeSlider() {
   const [carouselMovies, setCaoruselMovies] = useState<CarouselMovie[]>([]);
-  const [next, setNext] = useState<number[]>([1, 2, 3]); // Placeholder for "Up Next" movies
+  const [selected, setSelected] = useState(0); // Currently selected movie index in the carousel
+  const [next, setNext] = useState<number[]>([]); // Placeholder for "Up Next" movies
+
+  useEffect(() => {
+    // Update the "Up Next" movies whenever the selected movie changes
+    if (carouselMovies.length) {
+      const index1 = (selected + 1) % carouselMovies.length;
+      const index2 = (selected + 2) % carouselMovies.length;
+      const index3 = (selected + 3) % carouselMovies.length;
+      setNext([index1, index2, index3]);
+    }
+  }, [carouselMovies, selected]);
+
+  useEffect(() => {
+    const myCarousel = document.getElementById("carouselExampleControls");
+
+    const handleSlide = (event: Event) => {
+      const customEvent = event as any;
+      setSelected(customEvent.to);
+    };
+
+    if (!myCarousel) return;
+
+    (myCarousel as any).addEventListener("slid.bs.carousel", handleSlide);
+
+    return () => {
+      (myCarousel as any).removeEventListener("slid.bs.carousel", handleSlide);
+    };
+  }, []);
 
   const fetchUpcoming = async () => {
     try {
       const respose = await baseApi.get(
         "/movie/upcoming?language=en-US&page=1"
       );
-      console.log(respose.data.results);
       setCaoruselMovies(respose.data.results); //results je niz filmova
     } catch (err) {
       console.log("fetch upcoming movie error", err);
