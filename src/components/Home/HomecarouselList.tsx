@@ -11,7 +11,7 @@ interface HomecarouselListProps {
 function HomecarouselList({ next, carouselMovies }: HomecarouselListProps) {
   return (
     <div>
-      <h6 className="font-bold text-md text-yello-300">Up Next</h6>
+      <h6 className="text-lg font-bold !text-yellow-500">Up Next</h6>
       {/*The Up Next movie will show the next 
         three movies for the Carousal movies.This up next
           will make the div for each up next movie.

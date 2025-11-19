@@ -40,7 +40,7 @@ function HomeSlider() {
     try {
       const respose = await baseApi.get(
         "/movie/upcoming?language=en-US&page=1"
-      );
+      ); //fetch upcoming movies from the api
       setCaoruselMovies(respose.data.results); //results je niz filmova
     } catch (err) {
       console.log("fetch upcoming movie error", err);
