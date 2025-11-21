@@ -7,7 +7,7 @@ function Navbar() {
         <div className="flex space-x-16">
           <div className="flex flex-col text-yellow-500 leading-tight gap-0">
             {/*boja LOGO texta zuta */}
-            <h4 className="text-xl leading-none m-0 font-md">ALLABOUT</h4>
+            <h1 className="!text-[18px] leading-none m-0 font-md">ALLABOUT</h1>
             <h1 className="text-[20px] leading-none m-0 font-semibold">
               MOVIES
             </h1>

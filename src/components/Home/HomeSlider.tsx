@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { baseApi } from "../../api/axiosinstance";
-import type { CarouselMovie } from "../../utils/constant";
+import type { CarouselMovieType } from "../../utils/constant";
 import HomeCarousel from "./Homecarousel";
 import HomecarouselList from "./HomecarouselList";
 
 function HomeSlider() {
-  const [carouselMovies, setCaoruselMovies] = useState<CarouselMovie[]>([]);
+  const [carouselMovies, setCaoruselMovies] = useState<CarouselMovieType[]>([]);
   const [selected, setSelected] = useState(0); // Currently selected movie index in the carousel
   const [next, setNext] = useState<number[]>([]); // Placeholder for "Up Next" movies
 

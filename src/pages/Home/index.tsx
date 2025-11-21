@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import HomeSlider from "../../components/Home/HomeSlider";
 import { baseApi } from "../../api/axiosinstance";
-import type { MovieCard } from "../../utils/constant";
+import type { MovieCardType } from "../../utils/constant";
 import MovieList from "../../components/Home/MovieList";
 
 function Home() {
-  const [movies, setmovies] = useState<MovieCard[]>([]);
+  const [movies, setmovies] = useState<MovieCardType[]>([]);
 
   //here create function to fetch the top rated movies
   const fetchMovies = async () => {
