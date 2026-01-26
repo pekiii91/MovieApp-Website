@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="bg-[#571212] py-1  h-[68px] flex items-center">
@@ -5,18 +7,23 @@ function Navbar() {
       <div className="flex justify-between items-center w-[80%] mx-auto">
         {/*Zajednicki border padding za gore */}
         <div className="flex space-x-16">
-          <div className="flex flex-col text-yellow-500 leading-tight gap-0">
-            {/*boja LOGO texta zuta */}
-            <h1 className="!text-[18px] leading-none m-0 font-md">ALLABOUT</h1>
-            <h1 className="text-[20px] leading-none m-0 font-semibold">
-              MOVIES
-            </h1>
-          </div>
-
-          {/*Dugme */}
-          <button className="text-[18px] text-yellow-500 hover:underline">
-            EXPLORE
-          </button>
+          <Link to="/">
+            <div className="flex flex-col text-yellow-500 leading-tight gap-0">
+              {/*boja LOGO texta zuta */}
+              <h1 className="!text-[18px] leading-none m-0 font-md">
+                ALLABOUT
+              </h1>
+              <h1 className="!text-[24px] leading-none m-0 font-semibold">
+                MOVIES
+              </h1>
+            </div>
+          </Link>
+          <Link to="/movies">
+            {/*Dugme */}
+            <button className="text-[18px] text-yellow-500 hover:underline ">
+              EXPLORE
+            </button>
+          </Link>
         </div>
 
         {/*Search polje */}

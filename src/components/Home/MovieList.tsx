@@ -7,7 +7,7 @@ interface MovieListProps {
 }
 function MovieList({ movies }: MovieListProps) {
   return (
-    <div className="my-8">
+    <div className="mt-10">
       <h3 className="text-lg font-bold !text-yellow-500">
         Top Rated Movies On This Site
       </h3>

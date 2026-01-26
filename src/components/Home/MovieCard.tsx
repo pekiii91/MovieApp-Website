@@ -18,7 +18,11 @@ function MovieCard({ movieData }: MovieCardProps) {
         className={`my-3 border-2 border-zinc-800 rounded-lg overflow-hidden 
             ${movieData.id === hover ? "scale-[102%]" : ""} duration-200 `}>
         <div className="relative overflow-hidden">
-          <img src={imagepath + movieData.poster_path} alt="" />
+          <img
+            src={imagepath + movieData.poster_path}
+            className="aspect-[3/4]"
+            alt=""
+          />
           <div className="absolute -bottom- w-full h-28 _carouselGradient"></div>
         </div>
 
