@@ -41,7 +41,7 @@ function Home() {
       {/*Margina za Home page sa leve strane website */}
       <HomeSlider />
       {/*her the call MovieList */}
-      <MovieList movies={movies} />
+      <MovieList movies={movies} title="Top Rated Movie" />
       <div onClick={() => handlePageUpdate()}>
         <LoadMoreBtn />
       </div>
