@@ -12,7 +12,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
-          <Route path="/moviedetails/:id" element={<MovieDetails />} />
+          <Route path="/details/:id" element={<MovieDetails />} />{" "}
+          {/*Kreirali smo koren za Detalje o filmovima */}
           {/*Defaul page = Anything */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
