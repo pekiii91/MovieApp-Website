@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { baseApi } from "../../api/axiosinstance";
 import { imagepath, type MovieDetailType } from "../../utils/constant";
+import Trailers from "../../components/MovieDetail/Trailers";
 
 function MovieDetails() {
   const params = useParams();
@@ -68,6 +69,8 @@ function MovieDetails() {
                   </div>
                 </div>
               </div>
+              {/**Pozvali smo componentu Trailers.tsx iz foldera MovieDetail */}
+              <Trailers />
             </div>
           </div>
         </div>
