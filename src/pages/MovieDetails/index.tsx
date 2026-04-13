@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { baseApi } from "../../api/axiosinstance";
 import { imagepath, type MovieDetailType } from "../../utils/constant";
 import Trailers from "../../components/MovieDetail/Trailers";
+import SimilarMovies from "../../components/MovieDetail/SimilarMovies";
 
 function MovieDetails() {
   const params = useParams();
@@ -25,7 +26,7 @@ function MovieDetails() {
   }, [params]);
   return (
     <div>
-      {details && (
+      {details && params.id && (
         <div className="relative w-full h-fit ">
           <div className="relative">
             <img
@@ -70,7 +71,8 @@ function MovieDetails() {
                 </div>
               </div>
               {/**Pozvali smo componentu Trailers.tsx iz foldera MovieDetail */}
-              <Trailers />
+              <Trailers movieId={params.id} />
+              <SimilarMovies movieId={params.id} />
             </div>
           </div>
         </div>

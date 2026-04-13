@@ -1,6 +1,7 @@
 export const imagepath = "https://image.tmdb.org/t/p/original"; // For fetching images from TMDB
 
 export interface CarouselMovieType {
+  id: number;
   backdrop_path: string;
   poster_path: string;
   title: string;
